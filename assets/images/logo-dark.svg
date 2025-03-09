@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="48" viewBox="0 0 180 48">
+  <defs>
+    <!-- Enhanced animations -->
+    <style>
+      @keyframes glowPulse {
+        0%, 100% { filter: drop-shadow(0 0 2px rgba(76, 201, 240, 0.3)); }
+        50% { filter: drop-shadow(0 0 6px rgba(76, 201, 240, 0.5)); }
+      }
+      @keyframes borderDash {
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .logo-container { animation: glowPulse 3s infinite; }
+      .logo-container:hover .border-animate { animation: borderDash 1.5s ease-out forwards; }
+      .logo-container:hover .icon-animate { transform: scale(1.1); }
+      .icon-animate { transition: transform 0.3s ease; }
+      .text-animate { transition: all 0.3s ease; }
+      .logo-container:hover .text-animate { letter-spacing: 0.5px; }
+    </style>
+    
+    <!-- Enhanced gradients for dark mode -->
+    <linearGradient id="textGradientDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CC9F0"/>
+      <stop offset="100%" style="stop-color:#4361ee"/>
+    </linearGradient>
+    <linearGradient id="boxGradientDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CC9F0;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#4361ee;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Enhanced logo container -->
+  <g class="logo-container">
+    <!-- Background box with animated border -->
+    <rect x="2" y="2" width="176" height="44" rx="8" 
+          fill="url(#boxGradientDark)" 
+          class="border-animate"
+          stroke="url(#textGradientDark)"
+          stroke-width="1.5"
+          stroke-dasharray="440"
+          stroke-dashoffset="440"/>
+    
+    <!-- AI-inspired circuit icon -->
+    <g transform="translate(12, 12)" class="icon-animate">
+      <circle cx="12" cy="12" r="10" 
+              fill="none" 
+              stroke="url(#textGradientDark)" 
+              stroke-width="2"/>
+      <path d="M12 6v12M6 12h12" 
+            stroke="url(#textGradientDark)" 
+            stroke-width="2" 
+            stroke-linecap="round"/>
+      <circle cx="12" cy="12" r="2" fill="#4CC9F0"/>
+      
+      <!-- Decorative circuit lines -->
+      <path d="M18 12a6 6 0 1 1-12 0" 
+            stroke="url(#textGradientDark)" 
+            stroke-width="1" 
+            stroke-dasharray="4 4"
+            opacity="0.6"/>
+    </g>
+    
+    <!-- Enhanced text with animations -->
+    <g class="text-animate">
+      <text x="40" y="28" 
+            font-family="Poppins, sans-serif" 
+            font-size="20" 
+            font-weight="600" 
+            fill="url(#textGradientDark)"
+            letter-spacing="1">
+        Career
+      </text>
+      <text x="110" y="28" 
+            font-family="Poppins, sans-serif" 
+            font-size="20" 
+            font-weight="600" 
+            fill="#F8F9FA"
+            letter-spacing="1">
+        Match
+      </text>
+    </g>
+    
+    <!-- AI indicator with fade-in animation -->
+    <text x="40" y="38" 
+          font-family="Poppins, sans-serif" 
+          font-size="10" 
+          fill="#ADB5BD" 
+          letter-spacing="2"
+          style="animation: fadeInUp 0.5s ease-out">
+      AI-Powered Matching
+    </text>
+  </g>
+</svg>

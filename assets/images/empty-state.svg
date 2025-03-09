@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 240 200">
+  <defs>
+    <!-- Animations -->
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      .floating { animation: float 3s ease-in-out infinite; }
+      .pulsing { animation: pulse 2s ease-in-out infinite; }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="emptyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4361ee;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#4CC9F0;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Elements -->
+  <circle cx="120" cy="100" r="80" fill="url(#emptyGradient)" class="pulsing"/>
+  <circle cx="120" cy="100" r="60" fill="url(#emptyGradient)" opacity="0.5"/>
+
+  <!-- Empty Box -->
+  <g class="floating">
+    <rect x="80" y="60" width="80" height="80" 
+          fill="white" 
+          stroke="#4361ee" 
+          stroke-width="2" 
+          stroke-dasharray="4 4" 
+          rx="8"/>
+    
+    <!-- Cross Symbol -->
+    <line x1="100" y1="100" x2="140" y2="100" 
+          stroke="#6B7280" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+    <line x1="120" y1="80" x2="120" y2="120" 
+          stroke="#6B7280" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Decorative Circles -->
+  <circle cx="60" cy="60" r="4" fill="#4361ee" class="pulsing"/>
+  <circle cx="180" cy="140" r="4" fill="#4CC9F0" class="pulsing"/>
+  <circle cx="160" cy="40" r="3" fill="#4361ee" opacity="0.5"/>
+  <circle cx="80" cy="160" r="3" fill="#4CC9F0" opacity="0.5"/>
+
+  <!-- Text -->
+  <text x="120" y="160" 
+        font-family="Poppins, sans-serif" 
+        font-size="14" 
+        fill="#6B7280" 
+        text-anchor="middle">
+    No results found
+  </text>
+</svg>

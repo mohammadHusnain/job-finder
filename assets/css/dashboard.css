@@ -1,0 +1,576 @@
+/* Dashboard Styles for Job Finder */
+
+:root {
+  /* Light mode colors - Updated with softer, more pleasant palette */
+  --primary-color: #4361ee;
+  --secondary-color: #6c757d;
+  --success-color: #2ec4b6;
+  --info-color: #3a86ff;
+  --warning-color: #ff9f1c;
+  --danger-color: #e63946;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+
+  --bg-color: #f8f9fa;
+  --text-color: #2b2d42;
+  --card-bg: #ffffff;
+  --border-color: #e9ecef;
+  --sidebar-bg: #ffffff;
+  --sidebar-active: #edf2ff;
+  --header-bg: #ffffff;
+
+  /* Common colors for both themes */
+  --primary-light: rgba(67, 97, 238, 0.1);
+  --success-light: rgba(46, 196, 182, 0.1);
+  --info-light: rgba(58, 134, 255, 0.1);
+  --warning-light: rgba(255, 159, 28, 0.1);
+  --danger-light: rgba(230, 57, 70, 0.1);
+}
+
+/* Dark mode colors - Updated with less harsh, more pleasant dark theme */
+body.dark-mode {
+  --primary-color: #4cc9f0;
+  --secondary-color: #adb5bd;
+  --success-color: #2ec4b6;
+  --info-color: #4895ef;
+  --warning-color: #f9c74f;
+  --danger-color: #f94144;
+  --light-color: #2b2d42;
+  --dark-color: #f8f9fa;
+
+  --bg-color: #2b2d42;
+  --text-color: #edf2f4;
+  --card-bg: #343a40;
+  --border-color: #495057;
+  --sidebar-bg: #343a40;
+  --sidebar-active: #3d5a80;
+  --header-bg: #343a40;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.dashboard-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.dashboard-sidebar {
+  width: 250px;
+  background: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  bottom: 0;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.dashboard-main {
+  flex: 1;
+  margin-left: 250px;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  padding: 1rem 0;
+}
+
+.sidebar-nav .nav-link {
+  color: #495057;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav .nav-link i {
+  width: 20px;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.sidebar-nav .nav-link:hover {
+  color: var(--primary-color);
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.sidebar-nav .nav-link.active {
+  color: var(--primary-color);
+  background: rgba(0, 123, 255, 0.1);
+  border-left: 4px solid var(--primary-color);
+}
+
+/* User Menu */
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dashboard-section.active {
+  display: block;
+  opacity: 1;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+/* Stats Cards */
+.stat-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card-body {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stat-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.stat-card-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.stat-card-info h5 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.stat-card-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #212529;
+}
+
+.stat-card-footer {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Tables */
+.table {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.table th {
+  font-weight: 600;
+  border-bottom-width: 1px;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Forms */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.btn-group .btn:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Badges */
+.badge {
+  padding: 0.5em 0.8em;
+  font-weight: 500;
+}
+
+/* Charts */
+canvas {
+  max-width: 100%;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-spinner .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Notifications */
+.toast-container {
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 250px;
+  backdrop-filter: blur(10px);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Charts */
+.chart-container {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* Job Cards */
+.job-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.job-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.job-card-company {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.job-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.job-card-tag {
+  background: var(--primary-light);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Form Improvements */
+.form-floating {
+  margin-bottom: 1rem;
+}
+
+.form-floating > .form-control,
+.form-floating > .form-select {
+  height: calc(3.5rem + 2px);
+  padding: 1rem 0.75rem;
+}
+
+.form-floating > label {
+  padding: 1rem 0.75rem;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    transform: translateX(-100%);
+    z-index: 1040;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-show .dashboard-sidebar {
+    transform: translateX(0);
+  }
+
+  .dashboard-main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dashboard-header {
+    padding-left: 4rem;
+  }
+
+  .stat-card {
+    margin-bottom: 1rem;
+  }
+
+  .chart-container {
+    margin-bottom: 1rem;
+  }
+
+  .job-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Dark Mode Improvements */
+body.dark-mode {
+  background: #1a1a1a;
+  color: #fff;
+
+  .chart-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+  }
+
+  .job-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+  }
+
+  .table {
+    background: var(--card-bg);
+    color: var(--text-color);
+  }
+
+  .form-control,
+  .form-select {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    background: var(--card-bg);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+  }
+}
+
+/* Custom Colors */
+:root {
+  --primary-color: #4e73df;
+  --success-color: #1cc88a;
+  --info-color: #36b9cc;
+  --warning-color: #f6c23e;
+  --danger-color: #e74a3b;
+}
+
+.bg-primary-light {
+  background: rgba(78, 115, 223, 0.1);
+}
+
+.bg-success-light {
+  background: rgba(28, 200, 138, 0.1);
+}
+
+.bg-info-light {
+  background: rgba(54, 185, 204, 0.1);
+}
+
+.bg-warning-light {
+  background: rgba(246, 194, 62, 0.1);
+}
+
+.bg-danger-light {
+  background: rgba(231, 74, 59, 0.1);
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1030;
+  backdrop-filter: blur(4px);
+}
+
+body.sidebar-show .sidebar-overlay {
+  display: block;
+}
+
+/* Mobile Navigation */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1050;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.sidebar-toggle i {
+  font-size: 1.2rem;
+}
+
+/* Animation Improvements */
+.dashboard-section.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}

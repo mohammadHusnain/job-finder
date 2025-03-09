@@ -1,0 +1,318 @@
+/* Animations for Job Finder */
+
+/* Base Animation Classes */
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.animate__fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.animate__fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+
+.animate__bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+.animate__pulse {
+  animation-name: pulse;
+  animation-timing-function: ease-in-out;
+}
+
+/* Animation Delays */
+.animate__delay-1s {
+  animation-delay: 0.3s;
+}
+
+.animate__delay-2s {
+  animation-delay: 0.6s;
+}
+
+.animate__delay-3s {
+  animation-delay: 0.9s;
+}
+
+.animate__delay-4s {
+  animation-delay: 1.2s;
+}
+
+.animate__delay-5s {
+  animation-delay: 1.5s;
+}
+
+/* Animation Speeds */
+.animate__fast {
+  animation-duration: 0.8s;
+}
+
+.animate__faster {
+  animation-duration: 0.5s;
+}
+
+.animate__slow {
+  animation-duration: 1.5s;
+}
+
+.animate__slower {
+  animation-duration: 2s;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0) scaleY(1.1);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0) scaleY(1.05);
+  }
+
+  80% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0) scaleY(0.95);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Element-specific animations */
+
+/* Button hover animation */
+.btn {
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Card hover animations */
+.feature-card,
+.pricing-card,
+.testimonial-card,
+.job-match-item,
+.stat-card {
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.feature-card:hover,
+.pricing-card:hover,
+.testimonial-card:hover,
+.job-match-item:hover,
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar animation */
+.navbar {
+  transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme toggle animation */
+.btn-toggle-theme i {
+  transition: transform 0.5s;
+}
+
+.btn-toggle-theme:hover i {
+  transform: rotate(180deg);
+}
+
+/* Social icons animation */
+.social-icons a {
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px) rotate(10deg);
+}
+
+/* Timeline number animation */
+.timeline-number {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item:hover .timeline-number {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Home button animation */
+.home-button {
+  transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.home-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Continuous animations */
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+
+/* Intersection Observer Animations */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animations for lists */
+.stagger-animation > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.stagger-animation > *:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.stagger-animation > *:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.stagger-animation > *:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.stagger-animation > *:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.stagger-animation > *:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.stagger-animation > *:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.stagger-animation.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder | AI-Driven Job Matching Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.svg" alt="Job Finder Logo" height="40">
+                <span>Job Finder</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Sign In</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#signupModal">Sign
+                            Up</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-toggle-theme ms-3" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="video-container">
+            <video autoplay muted loop id="hero-video">
+                <source src="assets/images/hero-bg.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-4 fw-bold animate__fadeInUp">Your Dream Job, <span class="accent">Matched by
+                            AI</span></h1>
+                    <p class="lead mt-3 mb-4 animate__fadeInUp animate__delay-1s">
+                        Our AI-powered platform analyzes your resume and matches you with the perfect job opportunities
+                        tailored to your skills and preferences.
+                    </p>
+                    <div class="d-flex gap-3 animate__fadeInUp animate__delay-2s">
+                        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#signupModal">
+                            Get Started <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                        <button class="btn btn-outline-light btn-lg" href="#how-it-works">
+                            Learn More <i class="fas fa-info-circle ms-2"></i>
+                        </button>
+                    </div>
+                    <div class="mt-4 stats animate__fadeInUp animate__delay-3s">
+                        <div class="row">
+                            <div class="col-4">
+                                <h3>10K+</h3>
+                                <p>Job Matches</p>
+                            </div>
+                            <div class="col-4">
+                                <h3>5K+</h3>
+                                <p>Companies</p>
+                            </div>
+                            <div class="col-4">
+                                <h3>95%</h3>
+                                <p>Success Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="assets/images/hero-illustration.svg" alt="Job Finder Illustration"
+                        class="img-fluid animate__fadeIn animate__delay-1s">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Discover what makes our platform unique</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI-Powered Matching</h3>
+                        <p>Our advanced AI analyzes your resume and matches you with jobs that fit your skills and
+                            experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Resume Analysis</h3>
+                        <p>Get insights on how to improve your resume and increase your chances of landing interviews.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Company Matching</h3>
+                        <p>Companies can find the perfect candidates for their open positions with our AI-driven
+                            matching.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Real-time Notifications</h3>
+                        <p>Get notified instantly when new job matches are found or when your application status
+                            changes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Track your application progress and get insights on your job search performance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Access our platform from any device, anywhere, anytime with our responsive design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Simple steps to find your dream job</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-number">1</div>
+                            <div class="timeline-content">
+                                <h3>Create an Account</h3>
+                                <p>Sign up as a job seeker or employer in just a few clicks.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">2</div>
+                            <div class="timeline-content">
+                                <h3>Upload Your Resume</h3>
+                                <p>Upload your resume or create a new one using our templates.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">3</div>
+                            <div class="timeline-content">
+                                <h3>AI Analysis</h3>
+                                <p>Our AI analyzes your skills, experience, and preferences.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">4</div>
+                            <div class="timeline-content">
+                                <h3>Get Matched</h3>
+                                <p>Receive personalized job recommendations based on your profile.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">5</div>
+                            <div class="timeline-content">
+                                <h3>Apply with One Click</h3>
+                                <p>Apply to jobs with a single click and track your applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">Hear from our satisfied users</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-content">
+                                        <p>"Job Finder helped me land my dream job at a tech company within just 2
+                                            weeks! The AI matching was spot on and saved me countless hours of
+                                            searching."</p>
+                                        <div class="testimonial-author">
+                                            <img src="https://randomuser.me/api/portraits/women/32.jpg"
+                                                alt="Sarah Johnson">
+                                            <div>
+                                                <h5>Sarah Johnson</h5>
+                                                <p>Software Developer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-content">
+                                        <p>"As a hiring manager, Job Finder has revolutionized our recruitment process.
+                                            We've reduced our time-to-hire by 40% and found better quality candidates."
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <img src="https://randomuser.me/api/portraits/men/45.jpg"
+                                                alt="Michael Chen">
+                                            <div>
+                                                <h5>Michael Chen</h5>
+                                                <p>HR Director, TechCorp</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-content">
+                                        <p>"The resume analysis feature gave me valuable insights on how to improve my
+                                            CV. After making the suggested changes, I started getting more interviews
+                                            immediately!"</p>
+                                        <div class="testimonial-author">
+                                            <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                                                alt="Emily Rodriguez">
+                                            <div>
+                                                <h5>Emily Rodriguez</h5>
+                                                <p>Marketing Specialist</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Pricing Plans</h2>
+                <p class="section-subtitle">Choose the plan that fits your needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Basic</h3>
+                            <div class="price">
+                                <span class="currency">$</span>
+                                <span class="amount">0</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> AI Job Matching</li>
+                                <li><i class="fas fa-check"></i> Resume Upload</li>
+                                <li><i class="fas fa-check"></i> 10 Job Applications/month</li>
+                                <li><i class="fas fa-times"></i> Resume Analysis</li>
+                                <li><i class="fas fa-times"></i> Priority Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-outline-primary w-100">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Pro</h3>
+                            <div class="price">
+                                <span class="currency">$</span>
+                                <span class="amount">19</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> AI Job Matching</li>
+                                <li><i class="fas fa-check"></i> Resume Upload</li>
+                                <li><i class="fas fa-check"></i> Unlimited Applications</li>
+                                <li><i class="fas fa-check"></i> Resume Analysis</li>
+                                <li><i class="fas fa-check"></i> Priority Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-primary w-100">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Enterprise</h3>
+                            <div class="price">
+                                <span class="currency">$</span>
+                                <span class="amount">99</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Everything in Pro</li>
+                                <li><i class="fas fa-check"></i> Unlimited Job Postings</li>
+                                <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                                <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                                <li><i class="fas fa-check"></i> API Access</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-outline-primary w-100">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2>Ready to Find Your Dream Job?</h2>
+                    <p class="lead mb-4">Join thousands of job seekers who have found their perfect match with Job
+                        Finder.</p>
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#signupModal">
+                        Get Started Now <i class="fas fa-rocket ms-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="footer-brand" href="#">
+                        <img src="assets/images/logo.svg" alt="Job Finder Logo" height="40">
+                        <span>Job Finder</span>
+                    </a>
+                    <p class="mt-3">AI-powered job matching platform that connects job seekers with their dream jobs and
+                        helps companies find the perfect candidates.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Resume Tips</a></li>
+                        <li><a href="#">Interview Prep</a></li>
+                        <li><a href="#">Career Advice</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Contact</h5>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@jobfinder.com">info@jobfinder.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>
+                            <address>123 AI Street, San Francisco, CA 94107</address>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="copyright">© 2023 Job Finder. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="dropdown language-selector">
+                        <button class="btn btn-sm dropdown-toggle" type="button" id="languageDropdown"
+                            data-bs-toggle="dropdown">
+                            <i class="fas fa-globe"></i> English
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Español</a></li>
+                            <li><a class="dropdown-item" href="#">Français</a></li>
+                            <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="btn-group w-100" role="group">
+                            <input type="radio" class="btn-check" name="userType" id="userTypeUser" autocomplete="off"
+                                checked>
+                            <label class="btn btn-outline-primary" for="userTypeUser">Job Seeker</label>
+                            <input type="radio" class="btn-check" name="userType" id="userTypeCompany"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary" for="userTypeCompany">Employer</label>
+                        </div>
+                    </div>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                    </form>
+                    <div class="divider my-4">
+                        <span>or continue with</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="btn btn-outline-secondary w-100 mb-2">
+                            <i class="fab fa-google me-2"></i> Sign in with Google
+                        </button>
+                        <button class="btn btn-outline-secondary w-100">
+                            <i class="fab fa-linkedin-in me-2"></i> Sign in with LinkedIn
+                        </button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Don't have an account? <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#signupModal" data-bs-dismiss="modal">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create an Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="btn-group w-100" role="group">
+                            <input type="radio" class="btn-check" name="signupUserType" id="signupUserTypeUser"
+                                autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="signupUserTypeUser">Job Seeker</label>
+                            <input type="radio" class="btn-check" name="signupUserType" id="signupUserTypeCompany"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary" for="signupUserTypeCompany">Employer</label>
+                        </div>
+                    </div>
+                    <form id="signupForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                            <label class="form-check-label" for="termsCheck">I agree to the <a href="#">Terms of
+                                    Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                    </form>
+                    <div class="divider my-4">
+                        <span>or sign up with</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="btn btn-outline-secondary w-100 mb-2">
+                            <i class="fab fa-google me-2"></i> Sign up with Google
+                        </button>
+                        <button class="btn btn-outline-secondary w-100">
+                            <i class="fab fa-linkedin-in me-2"></i> Sign up with LinkedIn
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Already have an account? <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#loginModal" data-bs-dismiss="modal">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

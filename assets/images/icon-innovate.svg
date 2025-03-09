@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="40" cy="40" r="40" fill="#E6EFFF"/>
+    <path d="M55 40C55 48.2843 48.2843 55 40 55C31.7157 55 25 48.2843 25 40C25 31.7157 31.7157 25 40 25C48.2843 25 55 31.7157 55 40Z" fill="#4361EE" fill-opacity="0.2"/>
+    <path d="M40 25V30" stroke="#4361EE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M40 50V55" stroke="#4361EE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M55 40H50" stroke="#4361EE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M30 40H25" stroke="#4361EE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M50.6066 29.3934L47.0711 32.9289" stroke="#4361EE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M32.9289 47.0711L29.3934 50.6066" stroke="#4361EE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M50.6066 50.6066L47.0711 47.0711" stroke="#4361EE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M32.9289 32.9289L29.3934 29.3934" stroke="#4361EE" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="40" cy="40" r="10" fill="#4361EE"/>
+    <path d="M40 36V44" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M44 40H36" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg> 

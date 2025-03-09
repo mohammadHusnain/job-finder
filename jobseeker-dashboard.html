@@ -1,0 +1,492 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard - Job Finder</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <a href="index.html" class="home-link">
+                        <button class="btn btn-outline-primary home-button">
+                            <i class="fas fa-home"></i> Back to Home
+                        </button>
+                    </a>
+                </div>
+                <div class="col">
+                    <h1 class="dashboard-title">Job Seeker Dashboard</h1>
+                </div>
+                <div class="col-auto">
+                    <div class="user-menu dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="userMenuDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="User Avatar"
+                                class="user-avatar">
+                            <span class="user-name">Sarah Johnson</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item logout-btn" href="#"><i
+                                        class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#overview">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#job-matches">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Job Matches</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Resume</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#applications">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Applications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#saved-jobs">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Saved Jobs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#messages">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge bg-primary rounded-pill ms-2">2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="section-header">
+                    <h2>Dashboard Overview</h2>
+                    <p class="text-muted">Welcome back! Here's your job search summary.</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="stat-card-body">
+                                <div class="stat-card-icon bg-primary-light">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="stat-card-info">
+                                    <h5 class="stat-card-title">Job Matches</h5>
+                                    <p class="stat-card-value">24</p>
+                                </div>
+                            </div>
+                            <div class="stat-card-footer">
+                                <span class="text-success"><i class="fas fa-arrow-up"></i> 12%</span> from last week
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="stat-card-body">
+                                <div class="stat-card-icon bg-success-light">
+                                    <i class="fas fa-paper-plane"></i>
+                                </div>
+                                <div class="stat-card-info">
+                                    <h5 class="stat-card-title">Applications</h5>
+                                    <p class="stat-card-value">8</p>
+                                </div>
+                            </div>
+                            <div class="stat-card-footer">
+                                <span class="text-success"><i class="fas fa-arrow-up"></i> 5%</span> from last week
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="stat-card-body">
+                                <div class="stat-card-icon bg-warning-light">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="stat-card-info">
+                                    <h5 class="stat-card-title">Profile Views</h5>
+                                    <p class="stat-card-value">42</p>
+                                </div>
+                            </div>
+                            <div class="stat-card-footer">
+                                <span class="text-success"><i class="fas fa-arrow-up"></i> 18%</span> from last week
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="stat-card-body">
+                                <div class="stat-card-icon bg-info-light">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                                <div class="stat-card-info">
+                                    <h5 class="stat-card-title">Saved Jobs</h5>
+                                    <p class="stat-card-value">15</p>
+                                </div>
+                            </div>
+                            <div class="stat-card-footer">
+                                <span class="text-success"><i class="fas fa-arrow-up"></i> 3%</span> from last week
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Match Score -->
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Resume Match Score</h5>
+                        <a href="#resume" class="btn btn-sm btn-outline-primary">Improve Score</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <div class="resume-score-chart">
+                                    <div class="resume-score">78%</div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Resume Improvement Suggestions:</h6>
+                                <ul class="resume-suggestions">
+                                    <li>
+                                        <div class="d-flex justify-content-between">
+                                            <span>Add more specific technical skills</span>
+                                            <span class="text-warning">Medium Priority</span>
+                                        </div>
+                                        <div class="progress mt-1 mb-2" style="height: 6px;">
+                                            <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex justify-content-between">
+                                            <span>Quantify your achievements with metrics</span>
+                                            <span class="text-danger">High Priority</span>
+                                        </div>
+                                        <div class="progress mt-1 mb-2" style="height: 6px;">
+                                            <div class="progress-bar bg-danger" style="width: 45%"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex justify-content-between">
+                                            <span>Add more keywords relevant to your target jobs</span>
+                                            <span class="text-warning">Medium Priority</span>
+                                        </div>
+                                        <div class="progress mt-1 mb-2" style="height: 6px;">
+                                            <div class="progress-bar bg-warning" style="width: 70%"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Job Matches -->
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Top Job Matches</h5>
+                        <a href="#job-matches" class="btn btn-sm btn-outline-primary">View All Matches</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="job-matches-list">
+                            <div class="job-match-item">
+                                <div class="job-match-company">
+                                    <img src="https://logo.clearbit.com/google.com" alt="Google" class="company-logo">
+                                </div>
+                                <div class="job-match-content">
+                                    <h5 class="job-match-title">Senior Frontend Developer</h5>
+                                    <p class="job-match-company-name">Google</p>
+                                    <div class="job-match-details">
+                                        <span><i class="fas fa-map-marker-alt"></i> San Francisco, CA</span>
+                                        <span><i class="fas fa-dollar-sign"></i> $120K - $150K</span>
+                                        <span><i class="fas fa-briefcase"></i> Full-time</span>
+                                    </div>
+                                    <div class="job-match-score">
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2">Match Score:</span>
+                                            <div class="progress flex-grow-1" style="height: 6px;">
+                                                <div class="progress-bar bg-success" style="width: 92%"></div>
+                                            </div>
+                                            <span class="ms-2">92%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-match-actions">
+                                    <button class="btn btn-primary">Apply Now</button>
+                                    <button class="btn btn-outline-primary"><i class="fas fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="job-match-item">
+                                <div class="job-match-company">
+                                    <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"
+                                        class="company-logo">
+                                </div>
+                                <div class="job-match-content">
+                                    <h5 class="job-match-title">UI/UX Developer</h5>
+                                    <p class="job-match-company-name">Microsoft</p>
+                                    <div class="job-match-details">
+                                        <span><i class="fas fa-map-marker-alt"></i> Redmond, WA</span>
+                                        <span><i class="fas fa-dollar-sign"></i> $110K - $140K</span>
+                                        <span><i class="fas fa-briefcase"></i> Full-time</span>
+                                    </div>
+                                    <div class="job-match-score">
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2">Match Score:</span>
+                                            <div class="progress flex-grow-1" style="height: 6px;">
+                                                <div class="progress-bar bg-success" style="width: 88%"></div>
+                                            </div>
+                                            <span class="ms-2">88%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-match-actions">
+                                    <button class="btn btn-primary">Apply Now</button>
+                                    <button class="btn btn-outline-primary"><i class="fas fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="job-match-item">
+                                <div class="job-match-company">
+                                    <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="company-logo">
+                                </div>
+                                <div class="job-match-content">
+                                    <h5 class="job-match-title">Frontend Engineer</h5>
+                                    <p class="job-match-company-name">Apple</p>
+                                    <div class="job-match-details">
+                                        <span><i class="fas fa-map-marker-alt"></i> Cupertino, CA</span>
+                                        <span><i class="fas fa-dollar-sign"></i> $115K - $145K</span>
+                                        <span><i class="fas fa-briefcase"></i> Full-time</span>
+                                    </div>
+                                    <div class="job-match-score">
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2">Match Score:</span>
+                                            <div class="progress flex-grow-1" style="height: 6px;">
+                                                <div class="progress-bar bg-success" style="width: 85%"></div>
+                                            </div>
+                                            <span class="ms-2">85%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-match-actions">
+                                    <button class="btn btn-primary">Apply Now</button>
+                                    <button class="btn btn-outline-primary"><i class="fas fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Recent Activity</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon bg-primary-light">
+                                    <i class="fas fa-paper-plane"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p class="activity-text">You applied for <a href="#">Senior Frontend Developer</a>
+                                        at <strong>Google</strong></p>
+                                    <p class="activity-time">2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-success-light">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p class="activity-text"><strong>Microsoft</strong> viewed your profile</p>
+                                    <p class="activity-time">Yesterday</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-info-light">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p class="activity-text">You saved <a href="#">UI/UX Developer</a> at
+                                        <strong>Microsoft</strong>
+                                    </p>
+                                    <p class="activity-time">2 days ago</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-warning-light">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p class="activity-text">You updated your resume</p>
+                                    <p class="activity-time">3 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other sections would go here -->
+            <section id="job-matches" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Job Matches</h2>
+                    <p class="text-muted">AI-powered job recommendations based on your profile.</p>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Job matches content will appear here.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Placeholder for other sections -->
+            <section id="resume" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Resume</h2>
+                    <p class="text-muted">Manage and optimize your resume.</p>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Resume content will appear here.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="applications" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Applications</h2>
+                    <p class="text-muted">Track your job applications.</p>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Applications content will appear here.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/jobseeker-dashboard.js"></script>
+
+    <!-- Mobile Navigation Toggle -->
+    <button class="sidebar-toggle" type="button">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize dashboard functionality
+            initializeDashboard();
+
+            // Set user info
+            setUserInfo();
+        });
+
+        function initializeDashboard() {
+            // Handle sidebar navigation
+            const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+            const sections = document.querySelectorAll('.dashboard-section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remove active class from all links and sections
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked link
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('href').substring(1);
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        }
+
+        function setUserInfo() {
+            // Get user info from localStorage
+            const userName = localStorage.getItem('userName') || localStorage.getItem('userEmail') || 'Sarah Johnson';
+
+            // Update user name in header
+            const userNameElement = document.querySelector('.user-name');
+            if (userNameElement) {
+                userNameElement.textContent = userName;
+            }
+        }
+    </script>
+</body>
+
+</html>
