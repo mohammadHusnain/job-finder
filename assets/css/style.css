@@ -919,14 +919,9 @@ section {
   background-color: rgba(67, 97, 238, 0.1);
   color: var(--primary-color);
   margin: 0 5px;
-  transition: all 0.3s ease;
 }
 
-.social-icon:hover {
-  background-color: var(--primary-color);
-  color: white;
-  transform: translateY(-3px);
-}
+
 
 /* Stats Section */
 .stat-item {
@@ -1006,18 +1001,18 @@ section {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: skyblue;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: white;
+  color: rgba(255, 255, 255, 0.747);
   text-decoration: underline;
 }
 
 .footer h5 {
-  color: white;
+  color: skyblue;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -1097,7 +1092,7 @@ section {
 }
 
 /* Animation for About Page Elements */
-.fade-in {
+/* .fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -1109,18 +1104,18 @@ section {
 }
 
 /* Add animation delay for staggered effect */
-.fade-in-1 {
-  transition-delay: 0.1s;
+/* .fade-in-1 {
+  transition-delay: 100s;
 }
 .fade-in-2 {
-  transition-delay: 0.2s;
+  transition-delay: 100s;
 }
 .fade-in-3 {
-  transition-delay: 0.3s;
+  transition-delay: 100s;
 }
 .fade-in-4 {
-  transition-delay: 0.4s;
-}
+  transition-delay: 100s;
+} */ */
 
 /* Dark Mode Adjustments for About Page */
 .dark-mode .card {
